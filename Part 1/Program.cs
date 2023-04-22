@@ -15,5 +15,11 @@ namespace RecipeAndIngredients
     {
         private Ingredient[] ingredients; // Array to store the ingredients
         private string[] steps; // Array to store the steps
+
+        // Constructor to initialise the arrays based on user input
+        public Recipe()
+        {
+           
+        }
     }
 }
