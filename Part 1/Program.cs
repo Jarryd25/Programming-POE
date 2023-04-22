@@ -1,7 +1,5 @@
 ﻿using System;
 
-using System;
-
 namespace RecipeAndIngredients
 {
     // Define a class for an ingredient
@@ -15,6 +13,7 @@ namespace RecipeAndIngredients
     // Define a class for a recipe
     class Recipe
     {
-        
+        private Ingredient[] ingredients; // Array to store the ingredients
+        private string[] steps; // Array to store the steps
     }
 }
