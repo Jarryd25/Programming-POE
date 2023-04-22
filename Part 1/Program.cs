@@ -93,6 +93,45 @@ namespace RecipeAndIngredients
        static void Main(string[] args)
        {
             Recipe recipe = new Recipe();
-        }
+
+            while (true)
+            {
+                //Gives the user choices
+                Console.WriteLine("\nEnter a command:");
+                Console.WriteLine("1. Display recipe");
+                Console.WriteLine("2. Scale recipe");
+                Console.WriteLine("3. Reset quantities");
+                Console.WriteLine("4. Clear recipe");
+                Console.WriteLine("5. Exit");
+
+                string input = Console.ReadLine();
+
+                //The different cases are based on the user's input
+                switch (input)
+                {
+                    case "1":
+                        recipe.Display();
+                        break;
+                    case "2":
+                        Console.Write("Enter scale factor (0.5, 2, or 3): ");
+                        double factor = double.Parse(Console.ReadLine());
+                        recipe.Scale(factor);
+                        Console.WriteLine($"Recipe scaled by a factor of {factor}");
+                        break;
+                    case "3":
+                        recipe.Reset();
+                        Console.WriteLine("Quantities reset to original values");
+                        break;
+                    case "4":
+                        recipe.Clear();
+                        Console.WriteLine("Recipes have been cleared");
+                        break;
+                    case "5":
+                        Console.WriteLine("Goodbye!");
+                        Environment.Exit(0);
+                        break;
+                }
+            }
+       }
     }
 }
