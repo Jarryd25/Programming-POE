@@ -34,6 +34,17 @@ namespace RecipeAndIngredients
                 string unit = Console.ReadLine();
                 ingredients[i] = new Ingredient { Name = name, Quantity = quantity, Unit = unit };
             }
+
+            Console.Write("Enter the number of steps: ");
+            int numSteps = int.Parse(Console.ReadLine());
+
+            steps = new string[numSteps];
+            for (int i = 0; i < numSteps; i++)
+            {
+                Console.WriteLine($"Step #{i + 1}:");
+                steps[i] = Console.ReadLine();
+            }
         }
     }
+
 }
