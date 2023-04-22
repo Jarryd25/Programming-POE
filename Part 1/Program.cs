@@ -16,10 +16,24 @@ namespace RecipeAndIngredients
         private Ingredient[] ingredients; // Array to store the ingredients
         private string[] steps; // Array to store the steps
 
-        // Constructor to initialise the arrays based on user input
+        // Constructor to initialize the arrays based on user input
         public Recipe()
         {
-           
+            Console.Write("Enter the number of ingredients: ");
+            int numIngredients = int.Parse(Console.ReadLine());
+
+            ingredients = new Ingredient[numIngredients];
+            for (int i = 0; i < numIngredients; i++)
+            {
+                Console.WriteLine($"Ingredient #{i + 1}:");
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Quantity: ");
+                double quantity = double.Parse(Console.ReadLine());
+                Console.Write("Unit: ");
+                string unit = Console.ReadLine();
+                ingredients[i] = new Ingredient { Name = name, Quantity = quantity, Unit = unit };
+            }
         }
     }
 }
