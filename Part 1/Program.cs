@@ -49,19 +49,29 @@ namespace RecipeAndIngredients
         // Method to display the recipe in a neat format
         public void Display()
         {
+            Console.WriteLine("Ingredients:");
+            foreach (Ingredient ingredient in ingredients)
+            {
+                Console.WriteLine($"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name}");
+            }
 
+            Console.WriteLine("Steps:");
+            for (int i = 0; i < steps.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {steps[i]}");
+            }
         }
 
         // Method to scale the recipe by a given factor
         public void Scale(double factor)
         {
-
+            
         }
 
         // Method to reset the ingredient quantities to their original values
         public void Reset()
         {
-
+            
         }
 
         // Method to clear all the data in the recipe
