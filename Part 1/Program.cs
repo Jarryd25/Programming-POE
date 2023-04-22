@@ -45,6 +45,30 @@ namespace RecipeAndIngredients
                 steps[i] = Console.ReadLine();
             }
         }
+
+        // Method to display the recipe in a neat format
+        public void Display()
+        {
+
+        }
+
+        // Method to scale the recipe by a given factor
+        public void Scale(double factor)
+        {
+
+        }
+
+        // Method to reset the ingredient quantities to their original values
+        public void Reset()
+        {
+
+        }
+
+        // Method to clear all the data in the recipe
+        public void Clear()
+        {
+
+        }
     }
 
 }
