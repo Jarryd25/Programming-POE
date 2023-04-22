@@ -83,7 +83,8 @@ namespace RecipeAndIngredients
         // Method to clear all the data in the recipe
         public void Clear()
         {
-
+            Array.Clear(ingredients, 0, ingredients.Length);
+            Array.Clear(steps, 0, steps.Length);
         }
     }
 
