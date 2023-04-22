@@ -65,7 +65,10 @@ namespace RecipeAndIngredients
         // Method to scale the recipe by a given factor
         public void Scale(double factor)
         {
-            
+            foreach (Ingredient ingredient in ingredients)
+            {
+                ingredient.Quantity *= factor;
+            }
         }
 
         // Method to reset the ingredient quantities to their original values
