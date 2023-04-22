@@ -88,4 +88,11 @@ namespace RecipeAndIngredients
         }
     }
 
+    class MainProgram
+    {
+       static void Main(string[] args)
+        {
+
+        }
+    }
 }
