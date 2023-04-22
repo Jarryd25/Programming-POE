@@ -6,7 +6,7 @@ This repository contains a Recipe app written in a C# program that requires inst
 
 ## Installation
 1. Clone the repository to your local machine using the command:
-git clone https://github.com/your-username/your-repository.git
+git clone (https://github.com/Jarryd25/Programming-POE.git)
 
 2. Build the program using the command:
 cd your-repository
