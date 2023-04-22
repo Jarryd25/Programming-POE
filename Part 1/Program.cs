@@ -74,7 +74,10 @@ namespace RecipeAndIngredients
         // Method to reset the ingredient quantities to their original values
         public void Reset()
         {
-            
+            foreach (Ingredient ingredient in ingredients)
+            {
+                ingredient.Quantity /= 2; // Divide by 2 to reset to original value
+            }
         }
 
         // Method to clear all the data in the recipe
