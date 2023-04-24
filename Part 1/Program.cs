@@ -29,7 +29,17 @@ namespace RecipeAndIngredients
                 Console.Write("Name: ");
                 string name = Console.ReadLine();
                 Console.Write("Quantity: ");
-                double quantity = double.Parse(Console.ReadLine());
+                double quantity = 0;
+                try
+                {
+                    quantity = double.Parse(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    i--;
+                    continue;
+                }
                 Console.Write("Unit: ");
                 string unit = Console.ReadLine();
                 ingredients[i] = new Ingredient { Name = name, Quantity = quantity, Unit = unit };
