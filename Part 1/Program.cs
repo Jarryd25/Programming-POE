@@ -59,6 +59,7 @@ namespace RecipeAndIngredients
         // Method to display the recipe in a neat format
         public void Display()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Ingredients:");
             foreach (Ingredient ingredient in ingredients)
             {
@@ -106,6 +107,8 @@ namespace RecipeAndIngredients
 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
+
                 //Gives the user choices
                 Console.WriteLine("\nEnter a command:");
                 Console.WriteLine("1. Display recipe");
